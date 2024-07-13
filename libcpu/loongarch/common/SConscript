@@ -1,0 +1,14 @@
+# RT-Thread building script for component
+
+import os
+from building import *
+
+Import('rtconfig')
+
+cwd     = GetCurrentDir()
+src     = Glob('*.c') + Glob('*.cpp') + Glob('*_gcc.S')
+CPPPATH = [cwd]
+
+group = DefineGroup('libcpu', src, depend = [''], CPPPATH = CPPPATH)
+
+Return('group')

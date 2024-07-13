@@ -212,6 +212,9 @@ config ARCH_ARMV8
     select ARCH_ARM_MMU
     select RT_USING_CPU_FFS
 
+config ARCH_LOONGARCH
+    bool
+
 config ARCH_MIPS
     bool
 
