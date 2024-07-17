@@ -18,7 +18,7 @@
 #include <rthw.h>
 #include <exception.h>
 #include <drivers/pin.h>
-#include "ls2k1000.h"
+#include "ls2k300.h"
 #include "interrupt.h"
 
 static struct rt_irq_desc irq_handle_table[MAX_INTR];

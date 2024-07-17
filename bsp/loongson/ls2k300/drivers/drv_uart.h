@@ -11,7 +11,7 @@
 #ifndef _DRV_UART_H__
 #define _DRV_UART_H__
 
-#include "ls2k1000.h"
+#include "ls2k300.h"
 #include <rthw.h>
 
 /* UART registers */

@@ -11,12 +11,36 @@
 #include <rtthread.h>
 #include <rthw.h>
 
-#include "mips_regs.h"
-#include "mips_fpu.h"
-#include "exception.h"
+// #include "mips_regs.h"
+// #include "mips_fpu.h"
+// #include "exception.h"
 #include "drv_uart.h"
 #include "board.h"
-#include "ls2k1000.h"
+#include "ls2k300.h"
+
+// 做个样子的定义
+static void write_c0_count(int c)
+{
+    (void)c;
+    return;
+}
+
+static int read_c0_compare(void)
+{
+	return 0;
+}
+
+static void write_c0_compare(int count)
+{
+    return ;
+}
+
+
+static void mips_unmask_cpu_irq(int irq)
+{
+    return ;
+}
+
 
 /**
  * this function will reset CPU
@@ -24,9 +48,9 @@
  */
 void rt_hw_cpu_reset(void)
 {
-    WDT_EN = 0x01;
-    WDT_TIMER = 0x01;
-    WDT_SET = 0x01;
+    // WDT_EN = 0x01;
+    // WDT_TIMER = 0x01;
+    // WDT_SET = 0x01;
     rt_kprintf("reboot system...\n");
     while (1);
 }
@@ -39,8 +63,8 @@ MSH_CMD_EXPORT_ALIAS(rt_hw_cpu_reset, reboot, reset cpu);
  */
 void rt_hw_cpu_shutdown(void)
 {
-    PM1_STS &= 0xffffffff;
-    PM1_CNT = 0x3c00;
+    // PM1_STS &= 0xffffffff;
+    // PM1_CNT = 0x3c00;
     rt_kprintf("shutdown...\n");
 
     while (1);

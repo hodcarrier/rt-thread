@@ -1,7 +1,11 @@
 #ifndef _LS2K1000_H__
 #define _LS2K1000_H__
 
-#include <mips.h>
+// #include <mips.h>
+// dummy mips.h
+#define CKSEG1ADDR(x)   0
+/*    以上稻草人定义以后要删除                  */
+
 #include "interrupt.h"
 #include <rthw.h>
 
