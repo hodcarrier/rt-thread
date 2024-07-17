@@ -12,10 +12,13 @@
 #ifndef __SYS_SELECT_H__
 #define __SYS_SELECT_H__
 
+typedef long suseconds_t;
+
 #include <rtconfig.h>
 #include <sys/types.h>
 #include <sys/time.h>
 #include <string.h>
+
 
 #ifdef __cplusplus
 extern "C" {
