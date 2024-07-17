@@ -8,8 +8,13 @@
  * 2020-04-05     bigmagic  Initial version
  */
 
-OUTPUT_ARCH(mips)
+OUTPUT_ARCH(loongarch)
+
+/* GROUP(-lgcc -lc) */
+
 GROUP(-lgcc -lc)
+SEARCH_DIR(/home/duhuanpeng/rt-thread/bsp/loongson/ls2k300)
+
 
 ENTRY(_start)
 SECTIONS
