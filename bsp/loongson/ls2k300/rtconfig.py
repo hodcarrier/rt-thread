@@ -45,7 +45,7 @@ READELF = PREFIX + 'readelf'
 DEVICE = ' -march=loongarch64 -mabi=lp64s -msoft-float'
 CFLAGS = DEVICE + ' -std=gnu11 -G0 -fno-pic -fno-builtin -fno-exceptions -ffunction-sections -fomit-frame-pointer'
 AFLAGS = ' -c' + DEVICE + '  -fno-pic -fno-builtin -x assembler-with-cpp'
-LFLAGS = DEVICE + ' -nostartfiles -Wl,--gc-sections,-Map=rt-thread.map,-cref,-u,Reset_Handler -T rt-thread.lds'
+LFLAGS = DEVICE + ' -static -nostartfiles -Wl,--gc-sections,-Map=rt-thread.map,-cref,-u,Reset_Handler -T rt-thread.lds'
 CXXFLAGS = CFLAGS
 
 CPATH = ''
