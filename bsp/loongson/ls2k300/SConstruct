@@ -26,7 +26,7 @@ Export('rtconfig')
 # prepare building environment
 objs = PrepareBuilding(env, RTT_ROOT)
 
-rtconfig.LFLAGS += " -Ttext 0xffffffff80200000"
+rtconfig.LFLAGS += " -Ttext 0x9000000000200000"
 env.Replace(LINKFLAGS = rtconfig.LFLAGS)
 
 if GetDepend('RT_USING_FPU'):

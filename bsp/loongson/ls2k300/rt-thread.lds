@@ -19,7 +19,7 @@ SEARCH_DIR(/home/duhuanpeng/rt-thread/bsp/loongson/ls2k300)
 ENTRY(_start)
 SECTIONS
 {
-    . = 0xffffffff82000000 ;
+    . = 0x9000000000200000 ;
     .text :
     {
         __ebase_entry = .;
